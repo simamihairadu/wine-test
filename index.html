@@ -3,20 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Presentation Test Site</title>
+    <title>Domeniile Urlați - Premium Romanian Wines</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f9;
-            padding: 50px;
+        /* Base Styles & Smooth Scrolling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        h1 { color: #333; }
-        p { color: #666; font-size: 1.2em; }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Georgia', serif;
+            color: #333;
+            background-color: #fbf9f6;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(114, 24, 46, 0.95); /* Burgundy */
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        nav .logo {
+            color: #f1dfbb; /* Soft Gold */
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f1dfbb;
+        }
+
+        /* Full Page Sections */
+        section {
+            padding: 100px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(114, 24, 46, 0.6)), url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=1200') no-repeat center center/cover;
+            color: white;
+            padding-top: 150px;
+        }
+        #hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #f1dfbb;
+        }
+        #hero p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #f1dfbb;
+            color: #72182e;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: transform 0.2s;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Story Section */
+        #story {
+            background-color: #fbf9f6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: #72182e;
+            margin-bottom: 20px;
+        }
+        p.content-text {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 700px;
+            margin-bottom: 20px;
+        }
+
+        /* Collection Section */
+        #collection {
+            background-color: #f4efe6;
+            width: 100%;
+        }
+        .wine-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            max-width: 1200px;
+        }
+        .wine-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            width: 280px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 5px solid #72182e;
+        }
+        .wine-card h3 {
+            color: #72182e;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #72182e;
+            color: white;
+        }
+        #contact h2 {
+            color: #f1dfbb;
+        }
+        #contact p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4a0e1c;
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is my live presentation test website hosted on GitHub Pages.</p>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">URLAȚI WINERY</div>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#collection">Wines</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Domeniile Urlați</h1>
+        <p>Crafting exceptional Romanian heritage wines in the heart of Dealu Mare region.</p>
+        <a href="#collection" class="btn">Explore Our Blends</a>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story">
+        <h2>Sun, Soil & Tradition</h2>
+        <p class="content-text">Located on the same geographical parallel as Bordeaux and Tuscany, the Urlați vineyards enjoy the perfect balance of intense sunshine and rich clay-limestone soil.</p>
+        <p class="content-text">We blend ancient traditions with modern winemaking technology to create unique varieties that tell the story of our hills.</p>
+    </section>
+
+    <!-- Collection Section -->
+    <section id="collection">
+        <h2>The Signature Selection</h2>
+        <p>A taste of true Dealu Mare terroir.</p>
+        <div class="wine-grid">
+            <div class="wine-card">
+                <h3>Fetească Neagră</h3>
+                <p>The king of Romanian reds. Deep ruby color with intense notes of black currants, prunes, and a hint of vanilla spice.</p>
+            </div>
+            <div class="wine-card">
+                <h3>Pelinu de Urlați</h3>
+                <p>A traditional local treasure. A complex, aromatic wine subtly infused with wormwood and alpine herbs.</p>
+            </div>
+            <div class="wine-card">
+                <h3>Fetească Regală</h3>
+                <p>A crisp, elegant white wine presenting vibrant notes of green apple, white flowers, and citrus fruit.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Visit the Vineyards</h2>
+        <p>We love welcoming wine enthusiasts for tastings and cellar tours.</p>
+        <p style="margin-top: 20px;"><strong>Location:</strong> Urlați, Prahova County, Romania</p>
+        <p><strong>Email:</strong> tastings@urlati-winery-test.ro</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Urlați Winery Presentation Project. Crafted for GitHub Pages.</p>
+    </footer>
+
 </body>
 </html>
